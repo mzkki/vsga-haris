@@ -1,0 +1,15 @@
+Algoritma Membandingkan_2_bilangan;
+
+Deklarasi
+var bil1, bil2: integer;
+
+Begin
+read(bil1);
+read(bil2);
+IF(bil1 == bil2) THEN
+  write("bil1 dan bil2 bernilai sama");
+ELSE IF(bil1 < bil2) THEN 
+  write("bil1 lebih kecil dari bil2");
+ELSE
+  write("bil1 lebih besar dari bil2");
+ENDIF

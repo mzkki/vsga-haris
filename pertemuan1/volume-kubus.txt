@@ -1,0 +1,9 @@
+Algoritma menghitung_volume_kubus;
+
+Deklarasi
+var sisi, volume: integer;
+
+Begin
+read(sisi);
+volume <- sisi * sisi * sisi;
+write(volume);
