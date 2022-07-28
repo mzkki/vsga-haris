@@ -46,8 +46,13 @@
           location.reload();
         });
         daftar.appendChild(reload);
+        const change = document.getElementById('change');
+        change.setAttribute('hidden', 'hidden');
+        change.setAttribute('disabled', 'disabled');
       };
     </script>
-    <h5 onclick="changeCourse()">Pencet ini dan lihat apa yang terjadi</h5>
+    <button onclick="changeCourse()" id="change">
+      Pencet ini dan lihat apa yang terjadi
+    </button>
   </body>
 </html>
