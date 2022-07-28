@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 2</title>
+  </head>
+  <body>
+    <script>
+      let name = 'Vocational School GA';
+      let course = 'Web Programming';
+      let partner = 'Poltekba';
+
+      alert(
+        `Hello, selamat datang di ${name}! Selamat Belajar ${course}! bersama ${partner}!`
+      );
+
+      const daftar = document.createElement('div');
+      const nameTag = document.createElement('p');
+      const courseTag = document.createElement('p');
+      const partnerTag = document.createElement('p');
+      const body = document.getElementsByTagName('body')[0];
+
+      daftar.setAttribute('id', 'daftar');
+
+      nameTag.innerText = `Nama Program: ${name}`;
+      courseTag.innerText = `Mata Kuliah: ${course}`;
+      partnerTag.innerText = `Partner: ${partner}`;
+
+      daftar.appendChild(nameTag);
+      daftar.appendChild(courseTag);
+      daftar.appendChild(partnerTag);
+
+      body.appendChild(daftar);
+
+      const changeCourse = () => {
+        alert('Course anda akan berubah');
+        course = 'Web Design';
+        const changedCourse = document.createElement('p');
+        changedCourse.innerText = `Mata Kuliah anda akan diubah menjadi: ${course}`;
+        daftar.insertBefore(changedCourse, partnerTag);
+        const reload = document.createElement('button');
+        reload.innerText = 'Klik saya untuk reload';
+        reload.addEventListener('click', () => {
+          location.reload();
+        });
+        daftar.appendChild(reload);
+      };
+    </script>
+    <h5 onclick="changeCourse()">Pencet ini dan lihat apa yang terjadi</h5>
+  </body>
+</html>
