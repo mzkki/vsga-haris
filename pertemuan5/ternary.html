@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1" />
+  </head>
+  <title>Ternary</title>
 
-<head>
-   <meta charset="utf-8"/>
-   <meta name="viewport" content="width=device-width, intial-scale=1">
-</head>
-<title>Ternary</title>
-
-<body>
+  <body>
     <script>
-     var jwb = prompt("Apakah anda peserta VSGA Junior Web Developer?");
-     var jawaban = (jwb == "iya") ? "Benar" : "Salah";
-
-     document.write(`jawaban anda <b>${jawaban}</b>`);
-     </script>
-</body>
-
+      document.write(
+        prompt('Apakah anda sudah makan ?').toLowerCase() == 'iya'
+          ? 'Benar'
+          : 'Salah'
+      );
+    </script>
+  </body>
 </html>
