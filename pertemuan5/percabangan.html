@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percabangan</title>
+  </head>
+  <body>
+    <script>
+      let jawaban = prompt('Masukkan angka antara 1 - 5');
+      let hadiah = '';
+
+      switch (jawaban) {
+        case '1':
+          hadiah = 'Laptop';
+          break;
+        case '2':
+          hadiah = 'Handphone';
+          break;
+        case '3':
+          hadiah = 'Kamera';
+          break;
+        case '4':
+          hadiah = 'Baju';
+          break;
+        case '5':
+          hadiah = 'Baju';
+          break;
+        default:
+          hadiah = 'Tidak ada hadiah';
+          break;
+      }
+      document.write(`Hadiah yang kamu dapatkan adalah ${hadiah}`);
+    </script>
+  </body>
+</html>
