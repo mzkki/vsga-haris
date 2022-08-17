@@ -20,10 +20,13 @@
       <div class="d-flex">
         <ul class="navbar-nav me-2 mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="anggota.php">Anggota</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Input Data</a>
+            <a class="nav-link" aria-current="page" href="tambahBuku.php">Tambah Buku</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="tambahAnggota.php">Tambah Anggota</a>
           </li>
         </ul>
       </div>
@@ -61,10 +64,10 @@
             <td><?= $d['alamat'] ?></td>
             <td><?= $d['status'] ?></td>
             <td>
-              <a href="edit.php?idanggota=<?= $d['idanggota'] ?>">
+              <a href="editAnggota.php?idAnggota=<?= $d['idanggota'] ?>">
                 <div class="badge text-bg-primary">Edit</div>
               </a>
-              <a href="hapus.php?idanggota=<?= $d['idanggota'] ?>">
+              <a href="hapus.php?idanggota=<?= $d['idanggota'] ?>" onclick="return confirm ('yakin ingin menghapus data?')">
                 <div class="badge text-bg-danger">Hapus</div>
               </a>
             </td>
