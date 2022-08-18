@@ -13,7 +13,7 @@
   <!-- As a link -->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Anggota</a>
+      <a class="navbar-brand" href="#">Perpustakaan DTS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -32,7 +32,7 @@
 
   <div class="container mt-4">
     <h1>DTS Junior Web Developer</h1>
-    <p class="mb-4">Halaman Tambah Buku</p>
+    <p class="mb-4">Halaman Edit Buku</p>
 
     <?php
     include 'dbconn.php';
