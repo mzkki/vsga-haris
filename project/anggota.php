@@ -35,48 +35,50 @@
     <h1>DTS Junior Web Developer</h1>
     <p class="mb-4">Halaman Data Anggota</p>
     <a href="tambahAnggota.php" class="btn btn-success mb-3">Tambah Anggota</a>
-    <table class="table table-striped">
-      <thead>
-        <tr class="table-dark">
-          <th>No.</th>
-          <th>ID Anggota</th>
-          <th>Nama</th>
-          <th>Jenis Kelamin</th>
-          <th>Alamat</th>
-          <th>Status</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        include 'dbconn.php';
-        $no = 1;
-        $data = mysqli_query($conn, "select * from tb_anggota");
-        while ($d = mysqli_fetch_array($data)) {
-        ?>
-
-          <tr>
-            <td><?= $no++ ?></td>
-            <td><?= $d['idanggota'] ?></td>
-            <td><?= $d['nama'] ?></td>
-            <td><?= $d['jenis_kelamin'] ?></td>
-            <td><?= $d['alamat'] ?></td>
-            <td><?= $d['status'] ?></td>
-            <td>
-              <a href="editAnggota.php?idAnggota=<?= $d['idanggota'] ?>" class="btn btn-primary">
-                Ubah
-              </a>
-              <a href="hapus.php?idanggota=<?= $d['idanggota'] ?>" onclick="return confirm ('yakin ingin menghapus data?')" class="btn btn-danger">
-                Hapus
-              </a>
-            </td>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-dark">
+            <th>No.</th>
+            <th>ID Anggota</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Alamat</th>
+            <th>Status</th>
+            <th>Aksi</th>
           </tr>
+        </thead>
+        <tbody>
+          <?php
+          include 'dbconn.php';
+          $no = 1;
+          $data = mysqli_query($conn, "select * from tb_anggota");
+          while ($d = mysqli_fetch_array($data)) {
+          ?>
 
-        <?php
-        }
-        ?>
-      </tbody>
-    </table>
+            <tr>
+              <td><?= $no++ ?></td>
+              <td><?= $d['idanggota'] ?></td>
+              <td><?= $d['nama'] ?></td>
+              <td><?= $d['jenis_kelamin'] ?></td>
+              <td><?= $d['alamat'] ?></td>
+              <td><?= $d['status'] ?></td>
+              <td>
+                <a href="editAnggota.php?idAnggota=<?= $d['idanggota'] ?>" class="btn btn-primary my-2">
+                  Ubah
+                </a>
+                <a href="hapus.php?idanggota=<?= $d['idanggota'] ?>" onclick="return confirm ('yakin ingin menghapus data?')" class="btn btn-danger">
+                  Hapus
+                </a>
+              </td>
+            </tr>
+
+          <?php
+          }
+          ?>
+        </tbody>
+      </table>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
