@@ -11,7 +11,6 @@
 
 <body>
   <!-- As a link -->
-
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
       <a class="navbar-brand" href="#">Anggota</a>
@@ -21,18 +20,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-2 mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="anggota.php">Anggota</a>
+            <a class="nav-link active" aria-current="page" href="anggota.php">Anggota</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="tambahBuku.php">Tambah Buku</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="tambahAnggota.php">Tambah Anggota</a>
+            <a class="nav-link" aria-current="page" href="buku.php">Buku</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <div class="container mt-4">
     <h1>DTS Junior Web Developer</h1>
@@ -70,7 +67,8 @@
         </select>
       </div>
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Tambah</button>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+        <a href="anggota.php" class="btn btn-secondary">Kembali</a>
       </div>
     </form>
   </div>

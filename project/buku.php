@@ -32,30 +32,47 @@
 
   <div class="container mt-4">
     <h1>DTS Junior Web Developer</h1>
-    <p class="mb-4">Halaman Tambah Buku</p>
-    <form action="aksiTambahBuku.php" method="post" class="row g-3">
-      <div class="form-group">
-        <input type="hidden" name="id" id="idbuku">
-      </div>
-      <div class="col-md-6">
-        <label for="judulBuku" class="form-label">Judul Buku</label>
-        <input type="text" class="form-control" id="judulBuku" name="judulBuku" placeholder="Malin Kundang" required>
-      </div>
-      <div class="col-md-6">
-        <label for="pengarang" class="form-label">Pengarang</label>
-        <input type="text" class="form-control" id="pengarang" name="pengarang" placeholder="Raditya Dika" required>
-      </div>
-      <div class="col-12">
-        <label for="stokBuku" class="form-label">Stok Buku</label>
-        <input type="text" class="form-control" id="stokBuku" name="stokBuku" placeholder="100" required>
-      </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Kirim</button>
-        <a href="buku.php" class="btn btn-secondary">Kembali</a>
-      </div>
-    </form>
-  </div>
+    <p class="mb-4">Halaman Data Buku</p>
+    <a href="tambahBuku.php" class="btn btn-success mb-3">Tambah Buku</a>
+    <table class="table table-striped">
+      <thead>
+        <tr class="table-dark">
+          <th>No.</th>
+          <th>Judul</th>
+          <th>Pengarang</th>
+          <th>Stok</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        include 'dbconn.php';
+        $no = 1;
+        $data = mysqli_query($conn, "select * from tb_buku");
+        while ($d = mysqli_fetch_array($data)) {
+        ?>
 
+          <tr>
+            <td><?= $no++ ?></td>
+            <td><?= $d['judul'] ?></td>
+            <td><?= $d['pengarang'] ?></td>
+            <td><?= $d['stok'] ?></td>
+            <td>
+              <a href="editAnggota.php?idbuku=<?= $d['idbuku'] ?>" class="btn btn-primary">
+                Ubah
+              </a>
+              <a href="hapus.php?idbuku=<?= $d['idbuku'] ?>" onclick="return confirm ('yakin ingin menghapus data?')" class="btn btn-danger">
+                Hapus
+              </a>
+            </td>
+          </tr>
+
+        <?php
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>

@@ -20,13 +20,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-2 mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="anggota.php">Anggota</a>
+            <a class="nav-link active" aria-current="page" href="anggota.php">Anggota</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="tambahBuku.php">Tambah Buku</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="tambahAnggota.php">Tambah Anggota</a>
+            <a class="nav-link" aria-current="page" href="buku.php">Buku</a>
           </li>
         </ul>
       </div>
@@ -79,7 +76,7 @@
             </select>
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-primary">Edit</button>
+            <button type="submit" class="btn btn-primary">Ubah</button>
             <a href="anggota.php" class="btn btn-secondary">Kembali</a>
           </div>
       <?php

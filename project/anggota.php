@@ -23,19 +23,18 @@
             <a class="nav-link active" aria-current="page" href="anggota.php">Anggota</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="tambahBuku.php">Tambah Buku</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="tambahAnggota.php">Tambah Anggota</a>
+            <a class="nav-link" aria-current="page" href="buku.php">Buku</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+
   <div class="container mt-4">
     <h1>DTS Junior Web Developer</h1>
     <p class="mb-4">Halaman Data Anggota</p>
+    <a href="tambahAnggota.php" class="btn btn-success mb-3">Tambah Anggota</a>
     <table class="table table-striped">
       <thead>
         <tr class="table-dark">
@@ -65,10 +64,10 @@
             <td><?= $d['status'] ?></td>
             <td>
               <a href="editAnggota.php?idAnggota=<?= $d['idanggota'] ?>" class="btn btn-primary">
-                Edit
+                Ubah
               </a>
               <a href="hapus.php?idanggota=<?= $d['idanggota'] ?>" onclick="return confirm ('yakin ingin menghapus data?')" class="btn btn-danger">
-                Delete
+                Hapus
               </a>
             </td>
           </tr>
