@@ -38,16 +38,16 @@
         <input type="hidden" name="id" id="idbuku">
       </div>
       <div class="col-md-6">
-        <label for="judulBuku" class="form-label">Judul Buku</label>
-        <input type="text" class="form-control" id="judulBuku" name="judulBuku" placeholder="Malin Kundang" required>
+        <label for="judul" class="form-label">Judul Buku</label>
+        <input type="text" class="form-control" id="judul" name="judul" placeholder="Malin Kundang" required>
       </div>
       <div class="col-md-6">
         <label for="pengarang" class="form-label">Pengarang</label>
         <input type="text" class="form-control" id="pengarang" name="pengarang" placeholder="Raditya Dika" required>
       </div>
       <div class="col-12">
-        <label for="stokBuku" class="form-label">Stok Buku</label>
-        <input type="text" class="form-control" id="stokBuku" name="stokBuku" placeholder="100" required>
+        <label for="stok" class="form-label">Stok Buku</label>
+        <input type="text" class="form-control" id="stok" name="stok" placeholder="100" required>
       </div>
       <div class="col-12">
         <button type="submit" class="btn btn-primary">Kirim</button>
