@@ -13,11 +13,11 @@
   <!-- As a link -->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">Anggota</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="d-flex">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-2 mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="anggota.php">Anggota</a>
@@ -32,7 +32,6 @@
       </div>
     </div>
   </nav>
-
   <div class="container mt-4">
     <h1>DTS Junior Web Developer</h1>
     <p class="mb-4">Halaman Tambah Buku</p>
@@ -57,6 +56,9 @@
       </div>
     </form>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>
 
 </html>
