@@ -67,6 +67,9 @@
                 <a href="editAnggota.php?idAnggota=<?= $d['idanggota'] ?>" class="btn btn-primary my-2">
                   Ubah
                 </a>
+                <a href="cetakKartu.php?idAnggota=<?= $d['idanggota'] ?>" class="btn btn-success my-2">
+                  Cetak
+                </a>
                 <a href="hapus.php?idanggota=<?= $d['idanggota'] ?>" onclick="return confirm ('yakin ingin menghapus data?')" class="btn btn-danger">
                   Hapus
                 </a>
